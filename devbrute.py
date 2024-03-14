@@ -154,11 +154,10 @@ print("""\033[1;37m
 |_____/ \___| \_/ |____/|_|   \__,_|\__\___|""")
 
 import importlib
-import sys
 
 url = input('\033[1;34m[?]\033[0m Enter target URL: ')
 importlib.reload(sys)
-sys.setdefaultencoding('utf8')
+
 
 
 
