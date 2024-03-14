@@ -153,9 +153,13 @@ print("""\033[1;37m
 | |__| |  __/\ V /| |_) | |  | |_| | ||  __/
 |_____/ \___| \_/ |____/|_|   \__,_|\__\___|""")
 
+import importlib
+import sys
+
 url = input('\033[1;34m[?]\033[0m Enter target URL: ')
 importlib.reload(sys)
-sys.setdefaultenciding('utf8')
+sys.setdefaultencoding('utf8')
+
 
 
 def main():
