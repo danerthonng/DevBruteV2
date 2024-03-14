@@ -22,7 +22,7 @@ To install DevBrute, follow these steps:
 1. Clone the Repository
 
 ```bash
-git clone https://github.com/shivamksharma/DevBrute.git
+git clone https://github.com/danerthonng/DevBruteV2.git
 ```
 
 2. Install the Dependencies :
