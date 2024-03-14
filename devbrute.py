@@ -154,7 +154,7 @@ print("""\033[1;37m
 |_____/ \___| \_/ |____/|_|   \__,_|\__\___|""")
 
 url = input('\033[1;34m[?]\033[0m Enter target URL: ')
-imp.reload(sys)
+importlib.reload(sys)
 sys.setdefaultenciding('utf8')
 
 
