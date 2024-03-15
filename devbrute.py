@@ -186,8 +186,27 @@ def main():
 
         os.system("/etc/init.d/tor restart && rm -rf tmp/ geckodriver.log")
 
-    br = Bruter(service, username, wordlist, delay, fb_name=fb_name)
-    br.execute()
+    class Bruter:
+    def __init__(self, service, username, wordlist, delay, fb_name=None):
+        self.service = service
+        self.username = username
+        self.wordlist = wordlist
+        self.delay = delay
+        self.fb_name = fb_name
+
+    def execute(self):
+        if self.service == "facebook":
+            self.fb_name = input("Please Enter the Name of the Facebook Account: ")
+            os.system("clear")
+
+            os.system("/etc/init.d/tor restart && rm -rf tmp/ geckodriver.log")
+
+        if self.usercheck(self.username) == 1:
+            print("[Error] Username does not exist")
+            exit(1)
+
+        print("[OK] Checking account existence\n")
+        self.webBruteforce(self.username, self.wordlist, self.service, self.delay)
 
 
 if __name__ == '__main__':
